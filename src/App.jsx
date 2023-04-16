@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ShoppingItem from './components/ShoppingItem'
+import Items from './components/Items'
 
 function App() {
   const items =
@@ -34,10 +35,12 @@ function App() {
   return (
     <div className="App">
       <h2 className='text-4xl'>Shopping List</h2>
-      <ShoppingItem title={items[1].title} quantity={items[1].quantity} amount={items[1].amount} unit={items[1].unit}/>
+      {/* <ShoppingItem title={items[1].title} quantity={items[1].quantity} amount={items[1].amount} unit={items[1].unit}/>
       <ShoppingItem title={items[2].title} quantity={items[2].quantity} amount={items[2].amount} unit={items[2].unit}/>
       <ShoppingItem title={items[0].title} quantity={items[0].quantity} amount={items[0].amount} unit={items[0].unit}/>
       <ShoppingItem title={items[3].title} quantity={items[3].quantity} amount={items[3].amount} unit={items[3].unit}/>
+       */}
+      <Items items = {items}></Items>
     </div>
   )
 }

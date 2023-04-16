@@ -1,5 +1,6 @@
 import "./ShoppingItem.css";
 const ShoppingItem = (props) => {
+
   return (
     <div className="shopping-item">
       <h2>{props.title}</h2>
