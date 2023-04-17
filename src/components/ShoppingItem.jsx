@@ -1,8 +1,9 @@
 import "./ShoppingItem.css";
+import Card from "./Card";
 const ShoppingItem = (props) => {
 
   return (
-    <div className="shopping-item">
+    <Card className="shopping-item">
       <h2>{props.title}</h2>
       <div className="shopping-item__description">
         <h2>
@@ -11,7 +12,7 @@ const ShoppingItem = (props) => {
         <div className="text-white text-lg">₹{props.amount}</div>
         <div className="shopping-item__price"> ₹{props.amount * props.quantity}</div>
       </div>
-    </div>
+    </Card>
   );
 };
 
