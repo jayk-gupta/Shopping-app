@@ -2,10 +2,17 @@ import React from 'react';
 import './NewItem.css';
 import ItemForm from './ItemForm';
 
-const NewItem = () => { 
+const NewItem = (props) => { 
+  const saveItemDataHandler = (enteredItemData) => { 
+    const itemData = {
+      ...enteredItemData,
+      id: Math.random().toString()
+    }
+    props.onAddExpense(itemData);
+  }
   return (
     <div className='new-item'>
-  <ItemForm/>
+      <ItemForm onSaveItemData={saveItemDataHandler } />
 </div>
   )
 }

@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import "./ItemForm.css";
-const ItemForm = () => {
+const ItemForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState(""); //initially input is empty string
   const [enteredAmount, setEnteredAmount] = useState(""); //initially input is empty string
   const [enteredQuantity, setEnteredQuantity] = useState(""); //initially input is empty string
@@ -52,7 +52,8 @@ const ItemForm = () => {
       amount: enteredAmount,
       quantity: enteredQuantity,
     }
-    console.log(itemData);
+    // calling onSaveItemData function from NewItem.jsx
+  props.onSaveItemData(itemData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredQuantity('');
@@ -88,3 +89,4 @@ const ItemForm = () => {
 };
 
 export default ItemForm;
+// Data is generated in form component and we need to pass it in App.js component
