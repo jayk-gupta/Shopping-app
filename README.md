@@ -1,1 +1,4 @@
-# Shopping-app
+# Shopping-List-app
+
+# Built using:
+- React
